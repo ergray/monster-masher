@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.main-view', ['ngRoute'])
+angular.module('monsterMasher.main-view', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/main-view', {
@@ -9,6 +9,17 @@ angular.module('myApp.main-view', ['ngRoute'])
   });
 }])
 
-.controller('MainViewCtrl', [function() {
-
+.controller('MainViewCtrl', ['$scope', function($scope) {
+	$scope.top = [
+		'blue',
+		'green'
+	],
+	$scope.middle = [
+		'yellow',
+		'orange'
+	],
+	$scope.bottom = [
+		'black',
+		'white'
+	]
 }]);
