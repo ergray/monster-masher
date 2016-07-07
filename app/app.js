@@ -1,10 +1,10 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+angular.module('monsterMasher', [
   'ngRoute',
-  'myApp.main-view',
-  'myApp.version'
+  'monsterMasher.main-view',
+  'monsterMasher.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
