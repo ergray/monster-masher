@@ -54,6 +54,17 @@ angular.module('monsterMasher.main-view', ['ngRoute'])
 			$scope[result[1]+'Image'] = $scope[result[1]][$scope[result[1]][0].counter];
 		}	
 	};
+	$scope.saveImage = function(){
+
+	},
+	$scope.resetImages = function(){
+		$scope.top[0].counter = 1;
+		$scope.middle[0].counter = 1;
+		$scope.bottom[0].counter = 1
+		$scope.topImage = $scope.top[$scope.top[0].counter];
+		$scope.middleImage = $scope.middle[$scope.middle[0].counter];
+		$scope.bottomImage = $scope.bottom[$scope.bottom[0].counter]		
+	},
 	$scope.topImage = $scope.top[$scope.top[0].counter];
 	$scope.middleImage = $scope.middle[$scope.middle[0].counter];
 	$scope.bottomImage = $scope.bottom[$scope.bottom[0].counter];
