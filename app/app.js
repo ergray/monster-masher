@@ -4,7 +4,8 @@
 angular.module('monsterMasher', [
   'ngRoute',
   'monsterMasher.main-view',
-  'monsterMasher.version'
+  'monsterMasher.version',
+  'monsterMasher.complete-view'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
