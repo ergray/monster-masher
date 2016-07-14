@@ -11,4 +11,17 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
   $locationProvider.hashPrefix('!');
 
   $routeProvider.otherwise({redirectTo: '/main-view'});
-}]);
+}]).
+factory('saveData', function(){
+	var savedData = {};
+	function set(data) {
+		savedData = data
+	};
+	function get(){
+		return savedData
+	};
+	return {
+		set: set,
+		get: get
+	}
+});

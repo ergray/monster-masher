@@ -9,7 +9,7 @@ angular.module('monsterMasher.main-view', ['ngRoute'])
   });
 }])
 
-.controller('MainViewCtrl', ['$scope', '$location', '$http', function($scope, $location, $http) {
+.controller('MainViewCtrl', ['$scope', '$location', '$http', 'saveData', function($scope, $location, $http, saveData) {
 	// $scope.choices,
 
 	$http.get('http://localhost:8000//example.json')
@@ -62,7 +62,10 @@ angular.module('monsterMasher.main-view', ['ngRoute'])
 		}	
 	};
 	$scope.saveImage = function(details){
-		$location.path('/complete-view').replace();
+		var collectedData = [$scope.topImage, $scope.middleImage, $scope.bottomImage];
+		//$location.path('/complete-view').replace();
+		saveData.set(collectedData)
+		$location.path('/complete-view').replace();//.search({param: 'value'});
 	},
 	$scope.resetImages = function(){
 		//Reset all counters, and align images to one template

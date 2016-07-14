@@ -9,7 +9,7 @@ angular.module('monsterMasher.complete-view', ['ngRoute'])
   });
 }])
 
-.controller('CompleteCtrl', ['$scope', '$location', function($scope, $location) {
+.controller('CompleteCtrl', ['$scope', '$location', 'saveData', function($scope, $location, saveData) {
 
 	$scope.sendLink = function(){
 		//email link hash to friends
@@ -19,6 +19,9 @@ angular.module('monsterMasher.complete-view', ['ngRoute'])
 	},
 	$scope.startAgain = function(){
 		$location.path('/main-view').replace()
-	}
-
+	},
+	console.log(saveData.get())
+	$scope.topImage = saveData.get()[0],
+	$scope.middleImage = saveData.get()[1],
+	$scope.bottomImage = saveData.get()[2]
 }]);
