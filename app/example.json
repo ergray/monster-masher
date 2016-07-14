@@ -1,0 +1,14 @@
+{
+	"top" : {
+		"counter": 1,
+		"color" : ["blue", "green", "turquoise"]
+	},
+	"middle" : {
+		"counter": 1,
+		"color" : ["black", "white", "grey"]
+		},
+	"bottom" : {
+		"counter": 1,
+		"color" : ["purple", "avacado", "marble"]
+		}
+}
