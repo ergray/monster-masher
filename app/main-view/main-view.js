@@ -65,7 +65,8 @@ angular.module('monsterMasher.main-view', ['ngRoute'])
 		var collectedData = [$scope.topImage, $scope.middleImage, $scope.bottomImage];
 		//$location.path('/complete-view').replace();
 		saveData.set(collectedData)
-		$location.path('/complete-view').replace();//.search({param: 'value'});
+		console.log(collectedData)
+		$location.path('/complete-view/'+collectedData[0]+'/'+collectedData[1]+'/'+collectedData[2])//.replace();//.search({param: 'value'});
 	},
 	$scope.resetImages = function(){
 		//Reset all counters, and align images to one template
@@ -75,5 +76,8 @@ angular.module('monsterMasher.main-view', ['ngRoute'])
 		$scope.topImage = $scope.choices.top.color[0];
 		$scope.middleImage = $scope.choices.middle.color[0];
 		$scope.bottomImage = $scope.choices.bottom.color[0]	
+	},
+	$scope.testPath = function(){
+		$location.path('/newPath/'+$scope.choices.top.color[0]+'/'+$scope.choices.middle.color[0]+'/'+$scope.choices.bottom.color[0])
 	}
 }]);

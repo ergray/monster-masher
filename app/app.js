@@ -9,8 +9,18 @@ angular.module('monsterMasher', [
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
-
-  $routeProvider.otherwise({redirectTo: '/main-view'});
+  $routeProvider.when('/main-view', {
+  	templateUrl: 'main-view/main-view.html',
+  	controller: 'MainViewCtrl'
+  })
+  .when('/newPath/:top/:middle/:bottom', {
+  	templateUrl: 'test-path/test-path.html'
+  })
+  .when('/complete-view/:top/:middle/:bottom', {
+  	templateUrl: '/complete-view/complete-view.html',
+  	controller: 'CompleteCtrl'
+  })  
+  .otherwise({redirectTo: '/main-view'});
 }]).
 factory('saveData', function(){
 	var savedData = {};

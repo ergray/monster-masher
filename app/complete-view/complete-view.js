@@ -10,7 +10,7 @@ angular.module('monsterMasher.complete-view', ['ngRoute'])
 }])
 
 .controller('CompleteCtrl', ['$scope', '$location', 'saveData', function($scope, $location, saveData) {
-
+	
 	$scope.sendLink = function(){
 		//email link hash to friends
 	},
