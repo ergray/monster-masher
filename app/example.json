@@ -1,14 +1,20 @@
 {
 	"top" : {
 		"counter": 1,
-		"color" : ["blue", "green", "turquoise"]
+		"piece" : ["BodyPieces/man/head.jpg",
+				   "BodyPieces/robot/head.jpg", 
+				   "BodyPieces/lizard/head.jpg"]
 	},
 	"middle" : {
 		"counter": 1,
-		"color" : ["black", "white", "grey"]
+		"piece" : ["BodyPieces/man/torso.jpg",
+				   "BodyPieces/robot/torso.jpg", 
+				   "BodyPieces/lizard/torso.jpg"]
 		},
 	"bottom" : {
 		"counter": 1,
-		"color" : ["purple", "avacado", "marble"]
+		"piece" : ["BodyPieces/man/legs.jpg",
+				   "BodyPieces/robot/legs.jpg", 
+				   "BodyPieces/lizard/legs.jpg"]
 		}
 }

@@ -20,9 +20,9 @@ angular.module('monsterMasher.main-view', ['ngRoute'])
 			console.log(error)
 		})
 		.then(function(){
-			$scope.topImage = $scope.choices.top.color[0],
-			$scope.middleImage = $scope.choices.middle.color[0],
-			$scope.bottomImage = $scope.choices.bottom.color[0]
+			$scope.topImage = $scope.choices.top.piece[0],
+			$scope.middleImage = $scope.choices.middle.piece[0],
+			$scope.bottomImage = $scope.choices.bottom.piece[0]
 		}),
 	$scope.top = [
 		{counter: 0}
@@ -48,17 +48,17 @@ angular.module('monsterMasher.main-view', ['ngRoute'])
 		//move counter back or forth
 		//if you are at either end of the array, auto set counter to other end
 		if (resultDir[1] === 'right'){
-			if ($scope[result[1]][0].counter === $scope.choices[result[1]].color.length-1){
+			if ($scope[result[1]][0].counter === $scope.choices[result[1]].piece.length-1){
 				$scope[result[1]][0].counter = -1
 			};
 			$scope[result[1]][0].counter +=1;
-			$scope[result[1]+'Image'] = $scope.choices[result[1]].color[$scope[result[1]][0].counter];
+			$scope[result[1]+'Image'] = $scope.choices[result[1]].piece[$scope[result[1]][0].counter];
 		} else if (resultDir[1] === 'left'){
 			if ($scope[result[1]][0].counter === 0){
-				$scope[result[1]][0].counter = $scope.choices[result[1]].color.length
+				$scope[result[1]][0].counter = $scope.choices[result[1]].piece.length
 			};			
 			$scope[result[1]][0].counter -=1;
-			$scope[result[1]+'Image'] = $scope.choices[result[1]].color[$scope[result[1]][0].counter];
+			$scope[result[1]+'Image'] = $scope.choices[result[1]].piece[$scope[result[1]][0].counter];
 		}	
 	};
 	$scope.saveImage = function(details){
@@ -73,11 +73,8 @@ angular.module('monsterMasher.main-view', ['ngRoute'])
 		$scope.top[0].counter = 0;
 		$scope.middle[0].counter = 0;
 		$scope.bottom[0].counter = 0;
-		$scope.topImage = $scope.choices.top.color[0];
-		$scope.middleImage = $scope.choices.middle.color[0];
-		$scope.bottomImage = $scope.choices.bottom.color[0]	
-	},
-	$scope.testPath = function(){
-		$location.path('/newPath/'+$scope.choices.top.color[0]+'/'+$scope.choices.middle.color[0]+'/'+$scope.choices.bottom.color[0])
+		$scope.topImage = $scope.choices.top.piece[0];
+		$scope.middleImage = $scope.choices.middle.piece[0];
+		$scope.bottomImage = $scope.choices.bottom.piece[0]	
 	}
 }]);

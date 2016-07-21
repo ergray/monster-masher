@@ -1,9 +1,8 @@
 <p>Mix 'n Match Monster Masher</p>
 
 <p>This is it! Look what you've made!</p>
-{{topImage}}
-{{middleImage}}
-{{bottomImage}}
-
-<button ng-click='startAgain()'>Make another!</button>
-
+<div><img ng-src="{{topImage}}"></img></div>
+<div>{{middleImage}}</div>
+<div>{{bottomImage}}</div>
+<button ng-click='startAgain()'>Make another!</button><!--<a ng-click='sendLink()'>Share with a friend!</a>-->
+<a href="mailto:enteryour@addresshere.com?subject=Monster Masher&body={{emailLink}}">Send to a friend!</a>
