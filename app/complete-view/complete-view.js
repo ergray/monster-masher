@@ -23,5 +23,6 @@ angular.module('monsterMasher.complete-view', ['ngRoute'])
 	console.log(saveData.get())
 	$scope.topImage = saveData.get()[0],
 	$scope.middleImage = saveData.get()[1],
-	$scope.bottomImage = saveData.get()[2]
+	$scope.bottomImage = saveData.get()[2],
+	$scope.emailLink = ("localhost:8000/#!/complete-view/"+saveData.get()[0]+"/"+saveData.get()[1]+"/"+saveData.get()[2])
 }]);

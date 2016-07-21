@@ -13,9 +13,9 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
   	templateUrl: 'main-view/main-view.html',
   	controller: 'MainViewCtrl'
   })
-  .when('/newPath/:top/:middle/:bottom', {
-  	templateUrl: 'test-path/test-path.html'
-  })
+  // .when('/newPath/:top/:middle/:bottom', {
+  // 	templateUrl: 'test-path/test-path.html'
+  // })
   .when('/complete-view/:top/:middle/:bottom', {
   	templateUrl: '/complete-view/complete-view.html',
   	controller: 'CompleteCtrl'
