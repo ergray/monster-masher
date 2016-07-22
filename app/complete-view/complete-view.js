@@ -9,20 +9,13 @@ angular.module('monsterMasher.complete-view', ['ngRoute'])
   });
 }])
 
-.controller('CompleteCtrl', ['$scope', '$location', 'saveData', function($scope, $location, saveData) {
-	
-	$scope.sendLink = function(){
-		//email link hash to friends
-	},
-	$scope.resetImages = function(){
+.controller('CompleteCtrl', ['$scope', '$location', 'saveData', '$routeParams', function($scope, $location, saveData, $routeParams) {
 
-	},
 	$scope.startAgain = function(){
 		$location.path('/main-view').replace()
 	},
-	console.log(saveData.get())
-	$scope.topImage = saveData.get()[0],
-	$scope.middleImage = saveData.get()[1],
-	$scope.bottomImage = saveData.get()[2],
-	$scope.emailLink = ("localhost:8000/#!/complete-view/"+saveData.get()[0]+"/"+saveData.get()[1]+"/"+saveData.get()[2])
+	$scope.topImage = $routeParams.top,
+	$scope.middleImage = $routeParams.middle,
+	$scope.bottomImage = $routeParams.bottom,	
+	$scope.emailLink = ("localhost:8000/#!/complete-view/"+$routeParams.top+"/"+$routeParams.middle+"/"+$routeParams.bottom)
 }]);

@@ -1,20 +1,20 @@
 {
 	"top" : {
 		"counter": 1,
-		"piece" : ["BodyPieces/man/head.jpg",
-				   "BodyPieces/robot/head.jpg", 
-				   "BodyPieces/lizard/head.jpg"]
+		"piece" : ["man",
+				   "robot", 
+				   "lizard"]
 	},
 	"middle" : {
 		"counter": 1,
-		"piece" : ["BodyPieces/man/torso.jpg",
-				   "BodyPieces/robot/torso.jpg", 
-				   "BodyPieces/lizard/torso.jpg"]
+		"piece" : ["man",
+				   "robot", 
+				   "lizard"]
 		},
 	"bottom" : {
 		"counter": 1,
-		"piece" : ["BodyPieces/man/legs.jpg",
-				   "BodyPieces/robot/legs.jpg", 
-				   "BodyPieces/lizard/legs.jpg"]
+		"piece" : ["man",
+				   "robot", 
+				   "lizard"]
 		}
 }

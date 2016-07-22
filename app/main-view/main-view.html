@@ -3,13 +3,13 @@
 <p>Click on the right or left arrows to cycle through choices</p>
 
 <button  id='topRowLeft' ng-click='clickThrough($event)'>left arrow</button> 
-	<span><img ng-src="{{topImage}}"></span>
+	<span><img ng-src="BodyPieces/{{topImage}}/head.jpg"></span>
 <button id='topRowRight' ng-click='clickThrough($event)'>right arrow</button><br>
 <button id='middleRowLeft' ng-click='clickThrough($event)'>left arrow</button>
-	<span><img ng-src="{{middleImage}}"></span>
+	<span><img ng-src="BodyPieces/{{middleImage}}/torso.jpg"></span>
 <button id='middleRowRight' ng-click='clickThrough($event)'>right arrow</button><br>
 <button id='bottomRow' ng-click='clickThrough($event)'>left arrow</button> 
-	<span><img ng-src="{{bottomImage}}"></span>
+	<span><img ng-src="BodyPieces/{{bottomImage}}/legs.jpg"></span>
 <button id='bottomRowRight' ng-click='clickThrough($event)'>right arrow</button><br>
 <button ng-click='saveImage()'>Save</button><button ng-click='resetImages()'>Reset</button>
 
